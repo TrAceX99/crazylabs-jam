@@ -7,8 +7,6 @@ public class Player : MonoBehaviour {
             Touch touch = Input.GetTouch(0);
             switch (touch.phase)
             {
-                case TouchPhase.Began:
-                    break;
                 default:
                     break;
             }
