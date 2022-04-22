@@ -9,8 +9,6 @@ public class Player : MonoBehaviour {
             {
                 case TouchPhase.Began:
                     break;
-                case TouchPhase.Moved:
-                    break;
                 default:
                     break;
             }
