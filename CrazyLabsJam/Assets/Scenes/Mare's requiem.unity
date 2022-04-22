@@ -418,7 +418,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableRotation: 1
   rotateFactor: 12
-  slowdownFactor: 10
+  slowdownFactor: 12
+  mouseInput: 1
 --- !u!1 &1243390558
 GameObject:
   m_ObjectHideFlags: 0

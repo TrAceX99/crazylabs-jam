@@ -5,8 +5,10 @@ public class TouchRotate : MonoBehaviour {
 
     [SerializeField] float rotateFactor;
     [SerializeField] float slowdownFactor;
+    [SerializeField] bool mouseInput = false;
 
     float velocity;
+    float oldMousePosX = 0f;
 
     private void Start() {
         velocity = 0f;
@@ -14,6 +16,14 @@ public class TouchRotate : MonoBehaviour {
 
     private void Update() {
         if (!enableRotation) return;
+
+#if UNITY_EDITOR
+        if (mouseInput && Input.GetMouseButton(0)) {
+            if (Input.GetMouseButtonDown(0)) oldMousePosX = Input.mousePosition.x;
+            velocity = rotateFactor * -(Input.mousePosition.x - oldMousePosX);
+            oldMousePosX = Input.mousePosition.x;
+        }
+#endif
 
         if (Input.touchCount > 0) {
             Touch touch = Input.GetTouch(0);
