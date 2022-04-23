@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00666b80b53f8a49af10bc17298ff4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 4
   zoomedInDistance: 1.5
 --- !u!1001 &1561579078236472273
 PrefabInstance:
@@ -437,6 +437,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6773794359893872168, guid: 9412349776bf8b046b00496f7ad7e0bf, type: 3}
+      propertyPath: maxFeatures
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6773794359893872173, guid: 9412349776bf8b046b00496f7ad7e0bf, type: 3}
       propertyPath: m_Name
       value: Monster

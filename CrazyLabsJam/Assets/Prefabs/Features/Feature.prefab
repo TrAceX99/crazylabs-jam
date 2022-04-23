@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 5735064480308867848}
   - component: {fileID: 655581912267089271}
   - component: {fileID: 3515563863775696931}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Feature
   m_TagString: Feature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5735064480308867848
 Transform:
@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f415c5146281bdc42b80551450e9bb07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noSpawnZones:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!135 &3515563863775696931
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -57,7 +60,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7957629182937341474
 GameObject:

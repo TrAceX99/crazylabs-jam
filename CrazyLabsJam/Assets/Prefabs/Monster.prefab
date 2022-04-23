@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967212d37087e764d811e4754b31884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableRotation: 1
   rotateFactor: 12
   slowdownFactor: 12
+  lockedRotateSpeed: 4
   mouseInput: 1
 --- !u!114 &6773794359893872168
 MonoBehaviour:
@@ -66,4 +66,6 @@ MonoBehaviour:
   - {fileID: 6242756941077755441, guid: 68c57bc4c14bdd44dac2c0e641cb62e4, type: 3}
   featurePrefabs:
   - {fileID: 4765501077593611454, guid: 05b7f3bdd70440c418b0b27f816c4cc6, type: 3}
-  maxFeatures: 2
+  maxFeatures: 3
+  minFeatureSpawnAngle: 20
+  maxFeatureSpawnAngle: 130
