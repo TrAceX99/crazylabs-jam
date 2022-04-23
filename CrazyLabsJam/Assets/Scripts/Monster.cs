@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class Monster : MonoBehaviour {
     
+    public TouchRotate touchRotate { get; private set; }
 
     [SerializeField] GameObject[] bodyPrefabs;
     [SerializeField] GameObject[] featurePrefabs;
@@ -12,6 +13,7 @@ public class Monster : MonoBehaviour {
     Feature[] features;
 
     private void Start() {
+        touchRotate = GetComponent<TouchRotate>();
         Generate();
     }
 
