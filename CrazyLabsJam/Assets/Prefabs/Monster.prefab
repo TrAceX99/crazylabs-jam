@@ -66,6 +66,4 @@ MonoBehaviour:
   - {fileID: 6242756941077755441, guid: 68c57bc4c14bdd44dac2c0e641cb62e4, type: 3}
   featurePrefabs:
   - {fileID: 4765501077593611454, guid: 05b7f3bdd70440c418b0b27f816c4cc6, type: 3}
-  maxFeatures: 3
-  minFeatureSpawnAngle: 20
-  maxFeatureSpawnAngle: 130
+  maxFeatures: 4

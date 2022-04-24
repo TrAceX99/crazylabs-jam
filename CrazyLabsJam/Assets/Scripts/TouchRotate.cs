@@ -51,7 +51,7 @@ public class TouchRotate : MonoBehaviour {
 
     public void LockRotation(Vector3 alignPoint) {
         alignPoint.y = 0f;
-        targetRot = Quaternion.FromToRotation(-alignPoint, Vector3.forward);
+        targetRot = transform.rotation * Quaternion.Inverse(Quaternion.LookRotation(alignPoint, Vector3.up));
         touchRotation = false;
     }
 

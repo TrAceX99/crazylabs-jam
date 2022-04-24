@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
     [SerializeField] float moveSpeed = 5f;
-    [SerializeField] float zoomedInDistance = 1f;
 
     Vector3 basePos;
     Quaternion baseRot;
@@ -25,11 +24,10 @@ public class CameraController : MonoBehaviour {
         targetRot = baseRot;
     }
 
-    public void ZoomIn(Transform target) {
-        Vector3 rawPos = target.position + target.forward * zoomedInDistance;
+    public void ZoomIn(Vector3 rawPos) {
         Vector3 newPos = new Vector3(0f, rawPos.y, 0f);
         rawPos.y = 0f;
-        newPos.z = -rawPos.magnitude;
+        newPos.z = rawPos.magnitude;
         targetPos = newPos;
 
         targetRot = Quaternion.LookRotation(-newPos, Vector3.up);

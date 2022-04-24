@@ -49,6 +49,7 @@ MonoBehaviour:
   noSpawnZones:
     serializedVersion: 2
     m_Bits: 192
+  zoomedInDistance: 2
 --- !u!135 &3515563863775696931
 SphereCollider:
   m_ObjectHideFlags: 0

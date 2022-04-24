@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Feature : MonoBehaviour {
     [SerializeField] LayerMask noSpawnZones;
+    [SerializeField] float zoomedInDistance = 2f;
 
     Monster monster;
     CameraController cameraController;
@@ -16,8 +17,9 @@ public class Feature : MonoBehaviour {
     }
 
     public void Select() {
-        cameraController.ZoomIn(transform);
-        monster.touchRotate.LockRotation(transform.localPosition);
+        Vector3 rawPos = transform.position + transform.forward * zoomedInDistance;
+        cameraController.ZoomIn(rawPos);
+        monster.touchRotate.LockRotation(rawPos);
         selected = true;
     }
 
@@ -39,7 +41,7 @@ public class Feature : MonoBehaviour {
         } while (Physics.CheckSphere(hit.point, 0.05f, noSpawnZones));
 
         transform.position = hit.point;
-        transform.rotation = Quaternion.LookRotation(hit.normal, transform.up);
+        transform.rotation = Quaternion.LookRotation(hit.point, transform.up);
         Physics.SyncTransforms();
     }
 }
