@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     enum State {
-        Main, Feature
+        Main, Selected
     }
 
     [SerializeField] float tapMaxDuration = 0.2f;
@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
     float tapTimer;
     State state;
     CameraController cameraController;
-    Feature selectedFeature;
+    Customizable selectedSegment;
 
     private void Start() {
         state = State.Main;
@@ -53,23 +53,23 @@ public class Player : MonoBehaviour {
         if (state == State.Main) {
             if (!Physics.Raycast(tapRay, out hit)) return;
 
-            if (hit.collider.tag == "Feature") {
-                SelectFeature(hit.collider.gameObject.GetComponent<Feature>());
+            if (hit.collider.tag == "Customizable") {
+                SelectSegment(hit.collider.gameObject.GetComponent<Customizable>());
             }
-        } else if (state == State.Feature) {
-            if (!Physics.Raycast(tapRay, out hit)) DeselectFeature();
+        } else if (state == State.Selected) {
+            if (!Physics.Raycast(tapRay, out hit)) DeselectSegment();
         }
     }
 
-    void SelectFeature(Feature feature) {
-        state = State.Feature;
-        selectedFeature = feature;
-        feature.Select();
+    void SelectSegment(Customizable segment) {
+        state = State.Selected;
+        selectedSegment = segment;
+        segment.Select();
     }
 
-    void DeselectFeature() {
+    void DeselectSegment() {
         state = State.Main;
-        selectedFeature.Deselect();
-        selectedFeature = null;
+        selectedSegment.Deselect();
+        selectedSegment = null;
     }
 }

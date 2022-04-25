@@ -24,12 +24,13 @@ public class CameraController : MonoBehaviour {
         targetRot = baseRot;
     }
 
-    public void ZoomIn(Vector3 rawPos) {
-        Vector3 newPos = new Vector3(0f, rawPos.y, 0f);
+    public void ZoomIn(Transform target) {
+        Vector3 rawPos = target.position;
+        Vector3 newPos = new Vector3(0f, target.position.y, 0f);
         rawPos.y = 0f;
         newPos.z = rawPos.magnitude;
         targetPos = newPos;
 
-        targetRot = Quaternion.LookRotation(-newPos, Vector3.up);
+        targetRot = target.localRotation;
     }
 }
