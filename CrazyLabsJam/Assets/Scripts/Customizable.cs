@@ -1,6 +1,8 @@
 using UnityEngine;
 
 public class Customizable : MonoBehaviour {
+    public CustomizationSet[] CustomizationSets { get; protected set; }
+
     public bool customizationUnlocked;
 
     [SerializeField] Transform cameraPos;
@@ -18,6 +20,7 @@ public class Customizable : MonoBehaviour {
     private void Awake() {
         monster = GetComponentInParent<Monster>();
         cameraController = Camera.main.GetComponent<CameraController>();
+        CustomizationSets = GetComponents<CustomizationSet>();
         selected = false;
     }
 

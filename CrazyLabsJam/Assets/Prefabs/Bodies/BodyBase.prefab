@@ -408,6 +408,7 @@ GameObject:
   - component: {fileID: 437431978407559208}
   - component: {fileID: 8067103770329557973}
   - component: {fileID: 4741123370283633401}
+  - component: {fileID: 8541176618042998155}
   m_Layer: 0
   m_Name: Hair
   m_TagString: Customizable
@@ -467,6 +468,23 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8541176618042998155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8002379911177881492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4903c61dbfc6ecc41a599550e3dcb2b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setName: Hairstyle
+  affectedMesh: {fileID: 2492904420278120969}
+  options:
+  - mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  - mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8222013756823280775
 GameObject:
   m_ObjectHideFlags: 0
