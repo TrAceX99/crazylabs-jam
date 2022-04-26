@@ -65,4 +65,12 @@ public class Customizable : MonoBehaviour {
         Feature feature = go.GetComponent<Feature>();
         feature.segment = this;
     }
+
+    public void FeatureDone() {
+        featuresLeft--;
+
+        if (featuresLeft == 0) {
+            customizationUnlocked = true;
+        }
+    }
 }
