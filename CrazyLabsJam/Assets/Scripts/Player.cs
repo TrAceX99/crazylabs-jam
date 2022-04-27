@@ -10,6 +10,7 @@ public class Player : MonoBehaviour {
     }
 
     public ToolType selectedTool;
+    public bool inputEnabled;
 
     [SerializeField] float tapMaxDuration = 0.2f;
     [SerializeField] LayerMask segmentSelectionMask;
@@ -27,6 +28,8 @@ public class Player : MonoBehaviour {
     }
 
     private void Update() {
+        if (!inputEnabled) return;
+
         if (Input.touchCount > 0) {
             Touch touch = Input.GetTouch(0);
             RaycastHit hit;

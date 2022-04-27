@@ -17,7 +17,7 @@ public class TouchRotate : MonoBehaviour {
     }
 
     private void Update() {
-        if (touchRotation) {
+        if (touchRotation && GameManager.Instance.player.inputEnabled) {
             #if UNITY_EDITOR
             if (mouseInput && Input.GetMouseButton(0)) {
                 if (Input.GetMouseButtonDown(0)) oldMousePosX = Input.mousePosition.x;

@@ -15,11 +15,4 @@ public class MeshSwapSet : CustomizationSet {
         base.ApplyOption(optionID);
         affectedMesh.mesh = options[optionID].mesh;
     }
-
-    // DEBUG STUFF!
-    #if UNITY_EDITOR
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) ApplyOption(SelectedID + 1);
-    }
-    #endif
 }
