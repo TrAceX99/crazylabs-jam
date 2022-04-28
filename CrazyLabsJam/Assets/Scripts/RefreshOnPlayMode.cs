@@ -1,3 +1,5 @@
+#if UNITY_EDITOR
+
 using UnityEditor;
 using UnityEngine;
 
@@ -16,4 +18,6 @@ public static class EnterPlayMode
         if (obj == PlayModeStateChange.ExitingEditMode) AssetDatabase.Refresh(ImportAssetOptions.Default);
     }
 }
+
+#endif
  
