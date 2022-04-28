@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public enum ToolType {
-    None, TapTool, DragTool
+    None, TapTool, DragTool, VacuumTool
 }
 
 public class Player : MonoBehaviour {
@@ -14,6 +14,7 @@ public class Player : MonoBehaviour {
 
     [SerializeField] float tapMaxDuration = 0.2f;
     [SerializeField] LayerMask segmentSelectionMask;
+    [SerializeField] LayerMask featureInteractionMask;
 
     float tapTimer;
     State state;
@@ -38,11 +39,18 @@ public class Player : MonoBehaviour {
             {
                 case TouchPhase.Began:
                     if (state == State.Selected) {
-                        if (Physics.Raycast(Camera.main.ScreenPointToRay(touch.position), out hit) && hit.collider.tag == "Feature") {
+                        if (Physics.Raycast(Camera.main.ScreenPointToRay(touch.position), out hit, 20f, featureInteractionMask) && hit.collider.tag == "Feature") {
                             activeFeature = hit.collider.gameObject.GetComponent<Feature>();
                         }
                     }
                     tapTimer = Time.unscaledTime;
+                    break;
+                case TouchPhase.Moved:
+                    if (state == State.Selected) {
+                        if (Physics.Raycast(Camera.main.ScreenPointToRay(touch.position), out hit, 20f, featureInteractionMask) && hit.collider.tag == "Feature") {
+                            hit.collider.gameObject.GetComponent<Feature>().HandleTouch(touch);
+                        }
+                    }
                     break;
                 case TouchPhase.Ended:
                     if (Time.unscaledTime - tapTimer < tapMaxDuration) {
@@ -90,7 +98,7 @@ public class Player : MonoBehaviour {
         selectedSegment = segment;
         segment.Select();
         // !DEBUG!
-        selectedTool = ToolType.TapTool;
+        selectedTool = ToolType.VacuumTool;
     }
 
     void DeselectSegment() {
