@@ -13,4 +13,8 @@ public class TapFeature : Feature {
         Done();
         Destroy(gameObject);
     }
+
+    void PlaySFX() {
+        AudioManager.Instance.Play("Pop");
+    }
 }

@@ -15,11 +15,13 @@ public class AnimationController : MonoBehaviour {
     public void PlaySuccess() {
         anim.SetTrigger(PARAM_SUCCESS);
         successEffect.Play();
+        AudioManager.Instance.Play("Success");
     }
 
     public void PlayExit() {
         anim.SetTrigger(PARAM_EXIT);
         successEffect.Play();
+        AudioManager.Instance.Play("Success");
     }
 
     void EnableInput() {
