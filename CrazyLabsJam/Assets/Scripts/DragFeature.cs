@@ -72,6 +72,8 @@ public class DragFeature : Feature {
                     float deltaZ = Vector3.Dot(transform.forward, delta);
                     transform.position += transform.forward * Mathf.Sign(deltaZ) * pullGive * touch.deltaPosition.magnitude * Time.deltaTime;
 
+                    transform.rotation = Quaternion.LookRotation(transform.forward, (inputPos * 4 + Camera.main.transform.position)/5 - transform.forward);
+
                     if ((transform.localPosition - basePosLocal).z < 0f) transform.localPosition = basePosLocal;
 
                     if ((transform.localPosition - basePosLocal).magnitude > pullDistance) {
