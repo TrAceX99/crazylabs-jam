@@ -98,7 +98,7 @@ public class Player : MonoBehaviour {
         selectedSegment = segment;
         segment.Select();
         // !DEBUG!
-        selectedTool = ToolType.VacuumTool;
+        selectedTool = ToolType.DragTool;
     }
 
     void DeselectSegment() {
