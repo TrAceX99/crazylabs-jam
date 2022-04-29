@@ -18,6 +18,7 @@ public class DragFeature : Feature {
         pulled = false;
         basePosLocal = transform.localPosition;
         destroyTimer = Mathf.Infinity;
+        pullGive /= Display.main.systemWidth;
     }
 
     private void Update() {
@@ -70,7 +71,7 @@ public class DragFeature : Feature {
                 } else {
                     Vector3 delta = inputPos - transform.position;
                     float deltaZ = Vector3.Dot(transform.forward, delta);
-                    transform.position += transform.forward * Mathf.Sign(deltaZ) * pullGive * touch.deltaPosition.magnitude * Time.deltaTime;
+                    transform.position += transform.forward * Mathf.Sign(deltaZ) * pullGive * touch.deltaPosition.magnitude * Time.deltaTime / touch.deltaTime;
 
                     transform.rotation = Quaternion.LookRotation(transform.forward, (inputPos * 4 + Camera.main.transform.position)/5 - transform.forward);
 
