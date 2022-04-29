@@ -14,6 +14,7 @@ public class TouchRotate : MonoBehaviour {
 
     private void Start() {
         UnlockRotation();
+        rotateFactor /= Display.main.systemWidth;
     }
 
     private void Update() {
@@ -34,7 +35,7 @@ public class TouchRotate : MonoBehaviour {
                         velocity = 0f;
                         break;
                     case TouchPhase.Moved:
-                        velocity = rotateFactor * -touch.deltaPosition.x;
+                        velocity = rotateFactor * -touch.deltaPosition.x / touch.deltaTime;
                         break;
                     default:
                         break;
