@@ -5,6 +5,9 @@ public class DragFeature : Feature {
     [SerializeField] float pullDistance = 1f;
     [SerializeField] float gravity = 9.81f;
     [SerializeField] float destroyTime = 1f;
+    [SerializeField] bool stretchable = false;
+    [SerializeField] float stretchFactor = 0.1f;
+    [SerializeField] float stretchMaxDistance = 2f;
 
     bool grabbed = false;
     bool pulled = false;
@@ -73,21 +76,28 @@ public class DragFeature : Feature {
                     float deltaZ = Vector3.Dot(transform.forward, delta);
                     transform.position += transform.forward * Mathf.Sign(deltaZ) * pullGive * touch.deltaPosition.magnitude * Time.deltaTime / touch.deltaTime;
 
-                    transform.rotation = Quaternion.LookRotation(transform.forward, (inputPos * 4 + Camera.main.transform.position)/5 - transform.forward);
+
+                    if (stretchable) {
+                        float xScale = Mathf.Exp(-deltaZ * stretchFactor / 2);
+                        transform.localScale = new Vector3(xScale, xScale, 1f + deltaZ * stretchFactor);
+                    } else {
+                        transform.rotation = Quaternion.LookRotation(transform.forward, (inputPos * 4 + Camera.main.transform.position)/5 - transform.forward);
+                    }
 
                     if ((transform.localPosition - basePosLocal).z < 0f) transform.localPosition = basePosLocal;
 
-                    if ((transform.localPosition - basePosLocal).magnitude > pullDistance) {
+                    if ((transform.localPosition - basePosLocal).magnitude > pullDistance || (stretchable && delta.magnitude > stretchMaxDistance)) {
+                        if (stretchable) transform.localScale = Vector3.one;
                         pulled = true;
                         AudioManager.Instance.Play("Plunger", 0.7f);
                         dragPlane = new Plane(-Camera.main.transform.forward, Camera.main.transform.position + Camera.main.transform.forward * 1f);
                     }
                 }
-
                 break;
             case TouchPhase.Ended:
                 grabbed = false;
                 if (!pulled) transform.localPosition = basePosLocal;
+                if (stretchable) transform.localScale = Vector3.one;
                 else destroyTimer = Time.time;
                 break;
             default:
