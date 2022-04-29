@@ -79,6 +79,7 @@ public class DragFeature : Feature {
 
                     if ((transform.localPosition - basePosLocal).magnitude > pullDistance) {
                         pulled = true;
+                        AudioManager.Instance.Play("Plunger", 0.7f);
                         dragPlane = new Plane(-Camera.main.transform.forward, Camera.main.transform.position + Camera.main.transform.forward * 1f);
                     }
                 }

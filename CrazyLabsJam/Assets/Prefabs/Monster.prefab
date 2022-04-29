@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967212d37087e764d811e4754b31884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateFactor: 150
-  slowdownFactor: 12
+  rotateFactor: 140
+  slowdownFactor: 8
   lockedRotateSpeed: 4
   mouseInput: 1
 --- !u!114 &6773794359893872168

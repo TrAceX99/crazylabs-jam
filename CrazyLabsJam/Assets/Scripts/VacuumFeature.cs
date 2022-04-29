@@ -9,7 +9,7 @@ public class VacuumFeature : Feature {
         active = false;
 
         GetComponent<Animation>().Play();
-        AudioManager.Instance.Play("Slurp");
+        AudioManager.Instance.Play("Slurp", 0.5f);
     }
 
     void AnimationDone() {
