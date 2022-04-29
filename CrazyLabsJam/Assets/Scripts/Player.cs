@@ -35,8 +35,7 @@ public class Player : MonoBehaviour {
             Touch touch = Input.GetTouch(0);
             RaycastHit hit;
 
-            switch (touch.phase)
-            {
+            switch (touch.phase) {
                 case TouchPhase.Began:
                     if (state == State.Selected) {
                         if (Physics.Raycast(Camera.main.ScreenPointToRay(touch.position), out hit, 20f, featureInteractionMask) && hit.collider.tag == "Feature") {
