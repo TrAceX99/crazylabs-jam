@@ -5,6 +5,7 @@ public class CustomizationSet : MonoBehaviour {
     [System.Serializable]
     public abstract class CustomizationOption {
         // Stuff needed for UI goes here
+        public Sprite icon;
     }
 
     // In case things don't work, override this in child classes
