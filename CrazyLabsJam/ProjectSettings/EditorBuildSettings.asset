@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Mare's requiem.unity
+    guid: a306b1a575c4c3d4eb7dc174e14a86f1
   m_configObjects: {}

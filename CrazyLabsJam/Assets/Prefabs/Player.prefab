@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1145039189473674403}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -44,3 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2691321870a3cb41a475e3d1ca6571a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedTool: 0
+  inputEnabled: 0
+  tapMaxDuration: 0.2
+  segmentSelectionMask:
+    serializedVersion: 2
+    m_Bits: 439
+  featureInteractionMask:
+    serializedVersion: 2
+    m_Bits: 374
