@@ -76,10 +76,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   segment: {fileID: 0}
-  pullGive: 0.08
+  pullGive: 0.15
   pullDistance: 0.25
   gravity: 9.81
   destroyTime: 1
+  stretchable: 0
+  stretchFactor: 0.1
+  stretchMaxDistance: 2
 --- !u!1001 &9007354600662565595
 PrefabInstance:
   m_ObjectHideFlags: 0

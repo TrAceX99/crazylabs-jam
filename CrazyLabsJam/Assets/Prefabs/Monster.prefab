@@ -63,3 +63,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bodyPrefabs:
   - {fileID: 6242756941077755441, guid: 68c57bc4c14bdd44dac2c0e641cb62e4, type: 3}
+  - {fileID: 6242756941077755441, guid: 0357f3bc8ba52cd45bebbb3aee99e9cf, type: 3}

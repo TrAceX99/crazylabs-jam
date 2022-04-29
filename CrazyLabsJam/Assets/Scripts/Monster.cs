@@ -4,7 +4,6 @@ using System.Collections.Generic;
 public class Monster : MonoBehaviour {
     
     public TouchRotate touchRotate { get; private set; }
-    public Collider body { get; private set; }
     public AnimationController animationController { get; private set; }
 
     [SerializeField] GameObject[] bodyPrefabs;
@@ -16,7 +15,7 @@ public class Monster : MonoBehaviour {
     }
 
     void Generate() {
-        body = Instantiate(bodyPrefabs[Random.Range(0, bodyPrefabs.Length)], transform).GetComponent<Collider>();
+        Instantiate(bodyPrefabs[Random.Range(0, bodyPrefabs.Length)], transform).GetComponent<Collider>();
     }
 
     public void Done() {
