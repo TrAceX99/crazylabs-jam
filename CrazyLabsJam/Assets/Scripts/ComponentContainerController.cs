@@ -52,9 +52,29 @@ public class ComponentContainerController : MonoBehaviour
     }
 
 
+
+    public void ShowToolSetTypes(CustomizationSet[] customizationSets)
+    {
+        
+        this.initializeMenu();
+        foreach (CustomizationSet set in customizationSets)
+        {
+            if(set.Options.Length <= 0) continue;
+            GameObject component = Instantiate(componentPrefab);
+
+            component.GetComponent<ComponentController>().set = set;
+            component.GetComponent<ComponentController>().optionIndex = -1;
+            component.transform.SetParent(this.transform, false);
+            component.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(this.nextComponent, 0, 0);
+            component.GetComponent<Image>().sprite = set.Options[0].icon;
+            this.nextComponent += this.startingPosition;
+
+        }
+    }
+
+
     public void ShowTools(CustomizationSet[] customizationSets)
     {
-        Debug.Log("Show custom");
 
         this.initializeMenu();
         foreach (CustomizationSet set in customizationSets)
@@ -67,6 +87,7 @@ public class ComponentContainerController : MonoBehaviour
 
     public void ShowToolsSet(CustomizationSet customizationSet)
     {
+        this.initializeMenu();
         int index = 0;
         foreach (CustomizationSet.CustomizationOption option in customizationSet.Options)
         {
@@ -85,7 +106,6 @@ public class ComponentContainerController : MonoBehaviour
 
     public void ShowToolsBasic()
     {
-        Debug.Log("Show basic");
 
         this.initializeMenu();
         foreach (ToolType toolType in Enum.GetValues(typeof(ToolType)))

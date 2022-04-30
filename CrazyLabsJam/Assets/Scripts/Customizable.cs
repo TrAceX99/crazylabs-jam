@@ -27,6 +27,7 @@ public class Customizable : MonoBehaviour {
 
     private void Start() {
         SpawnFeatures();
+        this.customizationUnlocked = true;
     }
 
     public void Select() {
