@@ -19,7 +19,8 @@ public class DragFeature : Feature {
     Vector3 velocity;
     float destroyTimer;
 
-    private void Start() {
+    protected override void Start() {
+        base.Start();
         grabbed = false;
         pulled = false;
         basePosLocal = transform.localPosition;
@@ -43,6 +44,7 @@ public class DragFeature : Feature {
     }
 
     public override void HandleTouch(Touch touch) {
+        if (!segment.selected) return;
         if (!active || GameManager.Instance.player.SelectedTool != UsedTool) return;
 
         float enter;

@@ -41,7 +41,10 @@ public class UIManager : Singleton<UIManager> {
 
     public void ShowNextMonsterButton(){
         segmentCounter++;
-        if (segmentCounter >= 2) this.nextMonsterButton.Show();
+        if (segmentCounter >= 2) {
+            this.nextMonsterButton.Show();
+            GameManager.Instance.monster.HappyFace();
+        }
     }
 
     public void ResetNextMonster() {

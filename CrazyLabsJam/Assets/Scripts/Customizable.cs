@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Customizable : MonoBehaviour {
     public CustomizationSet[] CustomizationSets { get; protected set; }
+    public bool selected { get; protected set; }
 
     public bool customizationUnlocked = false;
     
@@ -15,7 +16,6 @@ public class Customizable : MonoBehaviour {
 
     Monster monster;
     CameraController cameraController;
-    bool selected;
     int featuresLeft;
 
     private void Awake() {
