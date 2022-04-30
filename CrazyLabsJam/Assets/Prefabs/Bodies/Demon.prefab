@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 62f9053e11f7915479b64f35c4293c5c, type: 2}
+    - target: {fileID: 635547659545568360, guid: c428cc557130df84cb748ad3da778fb6, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c428cc557130df84cb748ad3da778fb6, type: 3}
       propertyPath: m_Name
       value: Monster
@@ -85,6 +89,25 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 62f9053e11f7915479b64f35c4293c5c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c428cc557130df84cb748ad3da778fb6, type: 3}
+--- !u!1 &1459758672246864661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 635547659545568360, guid: c428cc557130df84cb748ad3da778fb6, type: 3}
+  m_PrefabInstance: {fileID: 2059255526119350141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &8508398107697665279
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459758672246864661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2959467708922500008, guid: c428cc557130df84cb748ad3da778fb6, type: 3}
 --- !u!23 &3548468783059079369 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -5932014270860095564, guid: c428cc557130df84cb748ad3da778fb6, type: 3}
@@ -127,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 319554480051327454, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.42
+      value: 4.17
       objectReference: {fileID: 0}
     - target: {fileID: 437431978407559208, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: m_RootOrder
@@ -248,6 +271,10 @@ PrefabInstance:
     - target: {fileID: 7317109097460954048, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: raycastRadius
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317109097460954048, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
+      propertyPath: customFeatures
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7317109097460954048, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: featureSpawnCollider
@@ -437,6 +464,17 @@ MonoBehaviour:
   options:
   - icon: {fileID: 0}
     material: {fileID: 2100000, guid: 712b1933df54ff949985895683ad27a7, type: 2}
+--- !u!114 &8748446296952321740 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7317109097460954048, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
+  m_PrefabInstance: {fileID: 2081558556755936524}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483986374269371141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 944a77d811b9fe549b7f9f2e0b4af130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8904008174989393533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -444,21 +482,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6242756941077755440}
     m_Modifications:
+    - target: {fileID: 534435523742470300, guid: 2db493d731f1afe4b8514c8e0913bf3c, type: 3}
+      propertyPath: segment
+      value: 
+      objectReference: {fileID: 8748446296952321740}
     - target: {fileID: 6103344775302966473, guid: 2db493d731f1afe4b8514c8e0913bf3c, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6103344775302966473, guid: 2db493d731f1afe4b8514c8e0913bf3c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.053
+      value: 0.054
       objectReference: {fileID: 0}
     - target: {fileID: 6103344775302966473, guid: 2db493d731f1afe4b8514c8e0913bf3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.853
+      value: 0.851
       objectReference: {fileID: 0}
     - target: {fileID: 6103344775302966473, guid: 2db493d731f1afe4b8514c8e0913bf3c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.632
+      value: 0.633
       objectReference: {fileID: 0}
     - target: {fileID: 6103344775302966473, guid: 2db493d731f1afe4b8514c8e0913bf3c, type: 3}
       propertyPath: m_LocalRotation.w

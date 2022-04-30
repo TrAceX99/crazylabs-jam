@@ -61,5 +61,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c9b2a9f49977cc489984643d4bf0195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnID: -1
   bodyPrefabs:
+  - {fileID: 6242756941077755441, guid: 0357f3bc8ba52cd45bebbb3aee99e9cf, type: 3}
+  - {fileID: 6242756941077755441, guid: 01e8dd5110dbabd4a9267923a3e59a21, type: 3}
   - {fileID: 6242756941077755441, guid: 6079165065185d14ca9516794b3dfcab, type: 3}

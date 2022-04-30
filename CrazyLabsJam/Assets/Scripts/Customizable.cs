@@ -4,7 +4,8 @@ public class Customizable : MonoBehaviour {
     public CustomizationSet[] CustomizationSets { get; protected set; }
 
     [HideInInspector] public bool customizationUnlocked;
-
+    
+    [SerializeField] int customFeatures = 0;
     [SerializeField] Transform cameraPos;
     [SerializeField] int maxFeatures;
     [SerializeField] GameObject[] featurePrefabs;
@@ -47,7 +48,7 @@ public class Customizable : MonoBehaviour {
     void SpawnFeatures() {
         if (maxFeatures == 0) return;
         int featureCount = Random.Range(1, maxFeatures + 1);
-        featuresLeft = featureCount;
+        featuresLeft = featureCount + customFeatures;
 
         for (int i = 0; i < featureCount; i++) {
             Spawn();

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class Feature : MonoBehaviour {
-    [HideInInspector] public Customizable segment;
+    public Customizable segment;
 
     protected bool active;
     

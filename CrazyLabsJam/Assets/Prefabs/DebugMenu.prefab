@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f328459f639084390cc2a05b2f5d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraDistance: 1
+  cameraDistance: 0
   cameraSpeed: 1
   volume: 1
+  pullGiveMultiplier: 1

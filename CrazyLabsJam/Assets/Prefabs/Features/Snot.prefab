@@ -76,13 +76,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   segment: {fileID: 0}
-  pullGive: 0.03
+  pullGive: 0.01
   pullDistance: 0.1
   gravity: 9.81
-  destroyTime: 1
+  destroyTime: 0.5
   stretchable: 1
-  stretchFactor: 2
-  stretchMaxDistance: 0.5
+  stretchFactor: 1.5
+  stretchMaxDistance: 1
 --- !u!1001 &8366848826192243895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108,15 +108,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b834bf782e5e648408fc59b6aed5b080, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b834bf782e5e648408fc59b6aed5b080, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b834bf782e5e648408fc59b6aed5b080, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.052
+      value: 0.082
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b834bf782e5e648408fc59b6aed5b080, type: 3}
       propertyPath: m_LocalRotation.w
