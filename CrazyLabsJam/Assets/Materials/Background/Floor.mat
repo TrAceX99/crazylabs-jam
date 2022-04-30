@@ -7,16 +7,16 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GhostMouth
+  m_Name: Floor
   m_Shader: {fileID: 4800000, guid: 9baf30ce95c751649b14d96da3a4b4d5, type: 3}
   m_ValidKeywords:
+  - _DISABLE_OUTLINE
   - _EMISSIVE_SIMPLE
   - _IS_ANGELRING_OFF
   - _IS_CLIPPING_TRANSMODE
   - _OUTLINE_NML
   m_InvalidKeywords:
   - _
-  - _ALPHABLEND_ON
   - _IS_OUTLINE_CLIPPING_YES
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -25,7 +25,8 @@ Material:
   stringTagMap:
     IgnoreProjection: False
     RenderType: TransparentCutout
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - ALWAYS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -71,7 +72,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1.14, y: 0.74}
+        m_Scale: {x: 2.57, y: 5.16}
         m_Offset: {x: 0, y: 0}
     - _Emissive_Tex:
         m_Texture: {fileID: 0}
@@ -82,8 +83,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 61499772a6a0c934db709cecaa0aeaf8, type: 3}
-        m_Scale: {x: 1.14, y: 0.74}
+        m_Texture: {fileID: 2800000, guid: 96a7181bad000e24984db39980f6a311, type: 3}
+        m_Scale: {x: 2.65, y: -3.84}
         m_Offset: {x: 0, y: 0}
     - _MatCap_Sampler:
         m_Texture: {fileID: 0}
@@ -144,8 +145,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _1st2nd_Shades_Feather: 0.0001
-    - _1st_ShadeColor_Feather: 0.0001
-    - _1st_ShadeColor_Step: 0.5
+    - _1st_ShadeColor_Feather: 0.076
+    - _1st_ShadeColor_Step: 0.531
     - _2nd_ShadeColor_Feather: 0.0001
     - _2nd_ShadeColor_Step: 0
     - _ARSampler_AlphaOn: 0
@@ -156,8 +157,8 @@ Material:
     - _Ap_RimLight_FeatherOff: 0
     - _Ap_RimLight_Power: 0.1
     - _AutoRenderQueue: 1
-    - _BaseColor_Step: 0.5
-    - _BaseShade_Feather: 0.0001
+    - _BaseColor_Step: 0.531
+    - _BaseShade_Feather: 0.076
     - _Base_Speed: 0
     - _BlurLevelMatcap: 0
     - _BlurLevelSGM: 0
@@ -167,10 +168,10 @@ Material:
     - _ClippingMode: 2
     - _Clipping_Level: 0
     - _ColorShift_Speed: 0
-    - _CullMode: 2
+    - _CullMode: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DstBlend: 10
+    - _DstBlend: 0
     - _EMISSIVE: 0
     - _Farthest_Distance: 100
     - _GI_Intensity: 0
@@ -181,10 +182,10 @@ Material:
     - _Inverse_Clipping: 0
     - _Inverse_MatcapMask: 0
     - _Inverse_Z_Axis_BLD: 1
-    - _IsBaseMapAlphaAsClippingMask: 1
+    - _IsBaseMapAlphaAsClippingMask: 0
     - _Is_BLD: 0
     - _Is_BakedNormal: 0
-    - _Is_BlendAddToHiColor: 0
+    - _Is_BlendAddToHiColor: 1
     - _Is_BlendAddToMatCap: 1
     - _Is_BlendBaseColor: 0
     - _Is_ColorShift: 0
@@ -214,7 +215,7 @@ Material:
     - _LightDirection_MaskOn: 0
     - _MatCap: 0
     - _Metallic: 0
-    - _Mode: 2
+    - _Mode: 0
     - _Nearest_Distance: 0.5
     - _OUTLINE: 0
     - _OcclusionStrength: 1
@@ -238,7 +239,7 @@ Material:
     - _ShadeColor_Step: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _StencilComp: 0
     - _StencilMode: 0
     - _StencilNo: 1
@@ -254,14 +255,14 @@ Material:
     - _Tweak_MatcapMaskLevel: 0
     - _Tweak_RimLightMaskLevel: 0
     - _Tweak_ShadingGradeMapLevel: 0
-    - _Tweak_SystemShadowsLevel: 0
+    - _Tweak_SystemShadowsLevel: 0.02
     - _Tweak_transparency: 0
     - _UVSec: 0
-    - _Unlit_Intensity: 1
+    - _Unlit_Intensity: 0.001
     - _Use_1stAs2nd: 0
-    - _Use_BaseAs1st: 0
+    - _Use_BaseAs1st: 1
     - _ZOverDrawMode: 0
-    - _ZWrite: 0
+    - _ZWrite: 1
     - _ZWriteMode: 1
     - _isUnityToonshader: 1
     - _simpleUI: 0
@@ -270,7 +271,7 @@ Material:
     - _utsVersionY: 6
     - _utsVersionZ: 1
     m_Colors:
-    - _1st_ShadeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _1st_ShadeColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     - _2nd_ShadeColor: {r: 1, g: 1, b: 1, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
