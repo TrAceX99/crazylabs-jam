@@ -26,4 +26,11 @@ public class Monster : MonoBehaviour {
         touchRotate.LockRotation(touchRotate.transform.forward);
         animationController.PlayExit();
     }
+
+    public void HappyFace() {
+        FaceRandomizer[] features = GetComponentsInChildren<FaceRandomizer>();
+        foreach (FaceRandomizer randomizer in features) {
+            randomizer.RanodmizeHappy();
+        }
+    }
 }

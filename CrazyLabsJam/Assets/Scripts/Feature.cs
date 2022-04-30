@@ -14,7 +14,7 @@ public class Feature : MonoBehaviour {
         effect = GetComponentInChildren<ParticleSystem>();
     }
 
-    private void Start() {
+    protected virtual void Start() {
         GameManager.Instance.player.OnToolChange.AddListener(ToolChangeHandle);
     }
 
