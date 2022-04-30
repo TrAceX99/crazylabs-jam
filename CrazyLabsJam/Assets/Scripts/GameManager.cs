@@ -27,6 +27,8 @@ public class GameManager : Singleton<GameManager> {
 
     public void RemoveMonster() {
         Destroy(monster.gameObject);
+        UIManager.Instance.ResetNextMonster();
+        UIManager.Instance.backButton.BackButtonPressed();
     }
 
     public void Done() {
