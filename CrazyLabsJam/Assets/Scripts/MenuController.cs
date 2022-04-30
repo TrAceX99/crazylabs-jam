@@ -3,9 +3,17 @@
 public class MenuController : MenuControllerAbstract
 {
 
-    override public void Show(CustomizationSet[] customizationSets=null){
-        if(customizationSets==null)   this.componentContainerController.ShowToolsBasic();
-        else            this.componentContainerController.ShowTools(customizationSets);
+    override public void Show(CustomizationSet customizationSet){
+        if(customizationSet==null)   this.Show();
+        else            this.componentContainerController.ShowToolsSet(customizationSet);
+
+        this.gameObject.SetActive(true);
+
+    }
+
+
+    override public void Show(){
+        this.componentContainerController.ShowToolsBasic();
 
         this.gameObject.SetActive(true);
 

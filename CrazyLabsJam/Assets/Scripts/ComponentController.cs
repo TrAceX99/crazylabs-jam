@@ -9,12 +9,11 @@ public class ComponentController : MonoBehaviour
     public int optionIndex;
 
     public void OnComponentClick(){
-        Debug.Log(this.toolType);
         if(this.set != null && this.optionIndex != -1){
             this.set.ApplyOption(this.optionIndex);
         } 
         else if(this.set != null && this.optionIndex == -1){
-            
+            UIManager.Instance.ShowToolsSet(this.set);
         } 
         else {
             GameManager.Instance.player.SelectedTool = this.toolType;

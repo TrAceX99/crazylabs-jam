@@ -18,5 +18,16 @@ public abstract class MenuControllerAbstract : MonoBehaviour
     }
 
 
-    public abstract void Show(CustomizationSet[] customizationSets=null);
+    public virtual void Show(CustomizationSet[] customizationSets){
+
+    }
+
+    public virtual void Show(CustomizationSet customizationSets){
+        
+    }
+
+
+    public virtual void Show(){
+        
+    }
 }
