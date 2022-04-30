@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0ab0625edf5c0f4428a030f23c1002fa, type: 2}
+    - target: {fileID: 2845290520445721763, guid: 2540975bf1792b543aa23240ccacb3d2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2945298957642648572, guid: 2540975bf1792b543aa23240ccacb3d2, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -204,25 +208,33 @@ PrefabInstance:
       value: LongEye
       objectReference: {fileID: 0}
     - target: {fileID: 7317109097460954048, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
+      propertyPath: maxFeatures
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317109097460954048, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
+      propertyPath: raycastRadius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317109097460954048, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: featureSpawnCollider
       value: 
       objectReference: {fileID: 5247047480445309511}
     - target: {fileID: 7317109097460954048, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: featurePrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 6414832883119883135, guid: 61b38c0ea93ce9247846891a935230c7, type: 3}
+      objectReference: {fileID: 6414832883119883135, guid: 85a633d6cffd3da41a97f39e1ab95a5e, type: 3}
     - target: {fileID: 7971937249643379221, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.378
       objectReference: {fileID: 0}
     - target: {fileID: 8067103770329557973, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: featurePrefabs.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8067103770329557973, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: featurePrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 6414832883119883135, guid: 8d55e844f9474ba449274a4c07410457, type: 3}
+      objectReference: {fileID: 6414832883119883135, guid: 2a6510d10b7693242bcdd3ebad4c61b6, type: 3}
     - target: {fileID: 8067103770329557973, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: featurePrefabs.Array.data[1]
       value: 
@@ -285,24 +297,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: setName
-      value: Hat
+      value: Hair
       objectReference: {fileID: 0}
     - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: options.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: options.Array.data[0].mesh
       value: 
-      objectReference: {fileID: 2534964839176971238, guid: 7dcc4835f6c2a6e46b6548b8b6c6fbc2, type: 3}
+      objectReference: {fileID: 2853531066430028532, guid: e5244fd7d99f9214a9b598772cee4ac1, type: 3}
     - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: options.Array.data[1].mesh
       value: 
-      objectReference: {fileID: 2534964839176971238, guid: 14e66447a3c9d1d49908f98c70bf5e46, type: 3}
+      objectReference: {fileID: 727620789734241507, guid: be5482d8bb3b8e445aa5317afaa60847, type: 3}
     - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: options.Array.data[2].mesh
       value: 
-      objectReference: {fileID: 6657998009922166292, guid: 1919da5590e889d4b94e522aa8501397, type: 3}
+      objectReference: {fileID: 8437126315025540154, guid: a6fd2952f09a8da498c35a4382211613, type: 3}
     - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: options.Array.data[3].mesh
       value: 
@@ -312,32 +324,6 @@ PrefabInstance:
     - {fileID: 5350720724675326770, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
     - {fileID: -3571323499474373303, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
---- !u!1 &483986374269371141 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1897239687461357065, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
-  m_PrefabInstance: {fileID: 2081558556755936524}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4609552731528372521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483986374269371141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1746d64854923b941b255afd154d965e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setName: Eyes color
-  affectedMaterial: {fileID: 0}
-  options:
-  - icon: {fileID: 0}
-    color: {r: 0.4179868, g: 0.87139875, b: 0.9528302, a: 1}
-  - icon: {fileID: 0}
-    color: {r: 0.12726949, g: 0.49056602, b: 0.22223997, a: 1}
-  - icon: {fileID: 0}
-    color: {r: 0.39853597, g: 0.14017443, b: 0.4716981, a: 1}
 --- !u!4 &6242756941077755440 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5350720724675326780, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}

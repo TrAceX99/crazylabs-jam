@@ -104,13 +104,4 @@ public class DragFeature : Feature {
                 break;
         }
     }
-
-    void AnimationDone() {
-        Done();
-        Destroy(gameObject);
-    }
-
-    void PlaySFX() {
-        AudioManager.Instance.Play("Pop");
-    }
 }

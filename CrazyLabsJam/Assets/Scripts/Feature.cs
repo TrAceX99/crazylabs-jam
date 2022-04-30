@@ -9,7 +9,7 @@ public class Feature : MonoBehaviour {
         active = true;
     }
 
-    protected virtual void Done() {
+    public virtual void Done() {
         segment.FeatureDone();
         active = false;
     }
