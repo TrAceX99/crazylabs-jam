@@ -9,7 +9,8 @@ public class ComponentContainerController : MonoBehaviour
     public GameObject leftArrowPrefab;
     public GameObject rightArrowPrefab;
     public GameObject componentPrefab;
-    public float startingPosition = 200f;
+    public GameObject backButtonPrefab;
+    public float startingPosition = 250f;
     private float nextComponent;
     void Start()
     {
@@ -23,10 +24,8 @@ public class ComponentContainerController : MonoBehaviour
     }
 
 
-    public void ShowTools(CustomizationSet[] customizationSets)
-    {
-        Debug.Log("Show custom");
-        this.nextComponent = this.startingPosition;
+    private void initializeMenu(){
+        this.nextComponent = this.startingPosition*2;
         foreach (Transform child in transform)
         {
             Destroy(child.gameObject);
@@ -34,13 +33,26 @@ public class ComponentContainerController : MonoBehaviour
 
 
         GameObject leftArrow = Instantiate(leftArrowPrefab);
-        leftArrow.transform.SetParent(this.transform);
+        leftArrow.transform.SetParent(this.transform, false);
         leftArrow.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(15, 0, 0);
 
         GameObject rightArrow = Instantiate(rightArrowPrefab);
-        rightArrow.transform.SetParent(this.transform);
+        rightArrow.transform.SetParent(this.transform, false);
         rightArrow.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(-15, 0, 0);
 
+
+        GameObject backButton = Instantiate(backButtonPrefab);
+        backButton.transform.SetParent(this.transform, false);
+        backButton.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(200, 0, 0);
+        
+    }
+
+
+    public void ShowTools(CustomizationSet[] customizationSets)
+    {
+        Debug.Log("Show custom");
+
+        this.initializeMenu();
         foreach (CustomizationSet set in customizationSets)
         {
             int index = 0;
@@ -62,21 +74,8 @@ public class ComponentContainerController : MonoBehaviour
     public void ShowToolsBasic()
     {
         Debug.Log("Show basic");
-        this.nextComponent = this.startingPosition;
-        foreach (Transform child in transform)
-        {
-            Destroy(child.gameObject);
-        }
 
-
-        GameObject leftArrow = Instantiate(leftArrowPrefab);
-        leftArrow.transform.SetParent(this.transform, false);
-        leftArrow.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(15, 0, 0);
-
-        GameObject rightArrow = Instantiate(rightArrowPrefab);
-        rightArrow.transform.SetParent(this.transform, false);
-        rightArrow.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(-15, 0, 0);
-
+        this.initializeMenu();
         foreach (ToolType toolType in Enum.GetValues(typeof(ToolType)))
         {
             if(toolType == ToolType.None) continue;
