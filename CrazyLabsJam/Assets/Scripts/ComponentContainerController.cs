@@ -43,10 +43,18 @@ public class ComponentContainerController : MonoBehaviour
 
         foreach (CustomizationSet set in customizationSets)
         {
-            GameObject component = Instantiate(componentPrefab);
-            component.transform.SetParent(this.transform);
-            component.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(this.nextComponent, 0, 0);
-            this.nextComponent += this.startingPosition;
+            int index = 0;
+            foreach(CustomizationSet.CustomizationOption option in set.Options){
+                GameObject component = Instantiate(componentPrefab);
+                
+                component.GetComponent<ComponentController>().set = set;
+                component.GetComponent<ComponentController>().optionIndex = index;
+                component.transform.SetParent(this.transform);
+                component.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(this.nextComponent, 0, 0);
+                this.nextComponent += this.startingPosition;
+                index++;
+            }
+            
         }
     }
 
@@ -72,6 +80,7 @@ public class ComponentContainerController : MonoBehaviour
         foreach (ToolType toolType in Enum.GetValues(typeof(ToolType)))
         {
             GameObject component = Instantiate(componentPrefab);
+            component.GetComponent<ComponentController>().toolType = toolType;
             component.transform.SetParent(this.transform);
             component.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(this.nextComponent, 0, 0);
             this.nextComponent += this.startingPosition;

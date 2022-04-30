@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ComponentController : MonoBehaviour
 {
+    public ToolType toolType;
+    public CustomizationSet set;
+    public int optionIndex;
     
     void Start()
     {
@@ -15,8 +18,13 @@ public class ComponentController : MonoBehaviour
     {
     }
 
-    public void OnComponentClick(GameObject clickedComponent){
-        Debug.Log("Clicked");
-        
+    public void OnComponentClick(){
+        Debug.Log(this.toolType);
+        if(this.set != null && this.optionIndex != -1){
+            this.set.ApplyOption(this.optionIndex);
+        } else {
+            GameManager.Instance.player.selectedTool = this.toolType;
+        }
+
     }
 }

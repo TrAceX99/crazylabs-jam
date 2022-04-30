@@ -13,7 +13,7 @@ public class CustomizationSet : MonoBehaviour {
 
     public int SelectedID { get; private set; }
 
-    [SerializeField] string setName;
+    [SerializeField] public string setName;
     [SerializeField] CustomizationOption[] options;
 
     private void Awake() {

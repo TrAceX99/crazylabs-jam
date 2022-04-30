@@ -65,14 +65,14 @@ public class Player : MonoBehaviour {
             activeFeature?.HandleTouch(touch);
         }
 
-        // #if UNITY_EDITOR
-        // if (Input.GetMouseButtonDown(0)) tapTimer = Time.unscaledTime;
-        // if (Input.GetMouseButtonUp(0)) {
-        //     if (Time.unscaledTime - tapTimer < tapMaxDuration) {
-        //         Tap(Input.mousePosition);
-        //     }
-        // }
-        // #endif
+        #if UNITY_EDITOR
+        if (Input.GetMouseButtonDown(0)) tapTimer = Time.unscaledTime;
+        if (Input.GetMouseButtonUp(0)) {
+            if (Time.unscaledTime - tapTimer < tapMaxDuration) {
+                Tap(Input.mousePosition);
+            }
+        }
+        #endif
 
     }
 
