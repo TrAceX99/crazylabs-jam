@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 3771429667870978681}
   - component: {fileID: 7317109097460954048}
   - component: {fileID: 8132014863733329526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Face
   m_TagString: Customizable
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: -3571323499474373303}
   - component: {fileID: 1945309457530248033}
   - component: {fileID: 5532647328979357020}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BodyBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 8067103770329557973}
   - component: {fileID: 4741123370283633401}
   - component: {fileID: 8541176618042998155}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair
   m_TagString: Customizable
   m_Icon: {fileID: 0}
@@ -519,8 +519,10 @@ MonoBehaviour:
   setName: Hairstyle
   affectedMesh: {fileID: 2492904420278120969}
   options:
-  - mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  - mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  - icon: {fileID: 0}
+    mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  - icon: {fileID: 0}
+    mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &8222013756823280775
 GameObject:
   m_ObjectHideFlags: 0
