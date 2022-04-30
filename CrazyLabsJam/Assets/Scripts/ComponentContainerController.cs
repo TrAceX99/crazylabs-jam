@@ -9,7 +9,7 @@ public class ComponentContainerController : MonoBehaviour
     public GameObject leftArrowPrefab;
     public GameObject rightArrowPrefab;
     public GameObject componentPrefab;
-    public float startingPosition = 100f;
+    public float startingPosition = 200f;
     private float nextComponent;
     void Start()
     {
@@ -49,7 +49,7 @@ public class ComponentContainerController : MonoBehaviour
                 
                 component.GetComponent<ComponentController>().set = set;
                 component.GetComponent<ComponentController>().optionIndex = index;
-                component.transform.SetParent(this.transform);
+                component.transform.SetParent(this.transform, false);
                 component.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(this.nextComponent, 0, 0);
                 this.nextComponent += this.startingPosition;
                 index++;
@@ -70,18 +70,18 @@ public class ComponentContainerController : MonoBehaviour
 
 
         GameObject leftArrow = Instantiate(leftArrowPrefab);
-        leftArrow.transform.SetParent(this.transform);
+        leftArrow.transform.SetParent(this.transform, false);
         leftArrow.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(15, 0, 0);
 
         GameObject rightArrow = Instantiate(rightArrowPrefab);
-        rightArrow.transform.SetParent(this.transform);
+        rightArrow.transform.SetParent(this.transform, false);
         rightArrow.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(-15, 0, 0);
 
         foreach (ToolType toolType in Enum.GetValues(typeof(ToolType)))
         {
             GameObject component = Instantiate(componentPrefab);
             component.GetComponent<ComponentController>().toolType = toolType;
-            component.transform.SetParent(this.transform);
+            component.transform.SetParent(this.transform, false);
             component.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(this.nextComponent, 0, 0);
             this.nextComponent += this.startingPosition;
         }
