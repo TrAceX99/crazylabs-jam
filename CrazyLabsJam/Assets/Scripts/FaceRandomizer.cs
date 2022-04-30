@@ -12,6 +12,7 @@ public class FaceRandomizer : MonoBehaviour {
     }
 
     void Ranodmize(Material[] choices) {
+        if (choices.Length == 0) return;
         meshRenderer.material = choices[Random.Range(0, choices.Length)];
     }
 

@@ -91,6 +91,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolSprites:
   - {fileID: 0}
-  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 21300000, guid: 1e15f9d2de313c9498aeec73f5705e16, type: 3}
+  - {fileID: 21300000, guid: a28d40d25e29b95439da6a4dc14727cd, type: 3}
+  - {fileID: 21300000, guid: a1bb5d532915b2c4aa2c77934bb40b42, type: 3}
