@@ -106,7 +106,7 @@ public class Player : MonoBehaviour {
 
     public void DeselectSegment() {
         state = State.Main;
-        selectedSegment.Deselect();
+        selectedSegment?.Deselect();
         selectedSegment = null;
         selectedTool = ToolType.None;
     }
