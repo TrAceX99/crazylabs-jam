@@ -1,8 +1,11 @@
 using UnityEngine;
 
 public class TapFeature : Feature {
+
+    protected override ToolType UsedTool { get { return ToolType.TapTool; } }
+
     public override void HandleTap() {
-        if (!active || GameManager.Instance.player.selectedTool != ToolType.TapTool) return;
+        if (!active || GameManager.Instance.player.SelectedTool != UsedTool) return;
 
         active = false;
 

@@ -16,9 +16,9 @@ public class Tool : MonoBehaviour {
         Touch touch = Input.GetTouch(0);
         switch (touch.phase) {
             case TouchPhase.Began:
-                if (GameManager.Instance.player.selectedTool == ToolType.None) break;
+                if (GameManager.Instance.player.SelectedTool == ToolType.None) break;
                 transform.position = touch.position;
-                Invoke("ShowTool", GameManager.Instance.player.selectedTool == ToolType.TapTool ? 0 : 0.15f);
+                Invoke("ShowTool", GameManager.Instance.player.SelectedTool == ToolType.TapTool ? 0 : 0.15f);
                 break;
             case TouchPhase.Moved:
                 transform.position = touch.position;
@@ -35,6 +35,6 @@ public class Tool : MonoBehaviour {
     void ShowTool() {
         if (Input.touchCount == 0) return;
         image.enabled = true;
-        image.sprite = toolSprites[(int)GameManager.Instance.player.selectedTool];
+        image.sprite = toolSprites[(int)GameManager.Instance.player.SelectedTool];
     }
 }

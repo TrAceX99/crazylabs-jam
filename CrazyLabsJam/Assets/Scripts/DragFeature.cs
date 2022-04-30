@@ -1,6 +1,9 @@
 using UnityEngine;
 
 public class DragFeature : Feature {
+
+    protected override ToolType UsedTool { get { return ToolType.DragTool; } }
+
     [SerializeField] float pullGive = 1f;
     [SerializeField] float pullDistance = 1f;
     [SerializeField] float gravity = 9.81f;
@@ -40,7 +43,7 @@ public class DragFeature : Feature {
     }
 
     public override void HandleTouch(Touch touch) {
-        if (!active || GameManager.Instance.player.selectedTool != ToolType.DragTool) return;
+        if (!active || GameManager.Instance.player.SelectedTool != UsedTool) return;
 
         float enter;
 
@@ -103,14 +106,5 @@ public class DragFeature : Feature {
             default:
                 break;
         }
-    }
-
-    void AnimationDone() {
-        Done();
-        Destroy(gameObject);
-    }
-
-    void PlaySFX() {
-        AudioManager.Instance.Play("Pop");
     }
 }

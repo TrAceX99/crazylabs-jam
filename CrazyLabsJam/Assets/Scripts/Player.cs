@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public enum ToolType {
     None, TapTool, DragTool, VacuumTool
@@ -10,13 +11,16 @@ public class Player : MonoBehaviour {
         Main, Selected
     }
 
-    public ToolType selectedTool;
+    public ToolType SelectedTool { get { return selectedTool; } set { selectedTool = value; OnToolChange.Invoke(); } }
+
+    public UnityEvent OnToolChange = new UnityEvent();
     public bool inputEnabled;
 
     [SerializeField] float tapMaxDuration = 0.2f;
     [SerializeField] LayerMask segmentSelectionMask;
     [SerializeField] LayerMask featureInteractionMask;
 
+    ToolType selectedTool;
     float tapTimer;
     State state;
     CameraController cameraController;
