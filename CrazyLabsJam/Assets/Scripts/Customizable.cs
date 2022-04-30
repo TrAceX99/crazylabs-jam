@@ -3,7 +3,7 @@ using UnityEngine;
 public class Customizable : MonoBehaviour {
     public CustomizationSet[] CustomizationSets { get; protected set; }
 
-    [HideInInspector] public bool customizationUnlocked;
+    public bool customizationUnlocked = false;
     
     [SerializeField] int customFeatures = 0;
     [SerializeField] Transform cameraPos;

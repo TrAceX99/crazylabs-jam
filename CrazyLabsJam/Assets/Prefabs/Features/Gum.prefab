@@ -82,7 +82,7 @@ MonoBehaviour:
   destroyTime: 0.5
   stretchable: 1
   stretchFactor: 2
-  stretchMaxDistance: 0.5
+  stretchMaxDistance: 1
 --- !u!1001 &8044295958504105990
 PrefabInstance:
   m_ObjectHideFlags: 0
