@@ -79,6 +79,7 @@ public class ComponentContainerController : MonoBehaviour
 
         foreach (ToolType toolType in Enum.GetValues(typeof(ToolType)))
         {
+            if(toolType == ToolType.None) continue;
             GameObject component = Instantiate(componentPrefab);
             component.GetComponent<ComponentController>().toolType = toolType;
             component.transform.SetParent(this.transform, false);
