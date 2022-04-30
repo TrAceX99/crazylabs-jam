@@ -8,6 +8,8 @@ public class MaterialSwapSet : CustomizationSet {
         public Material material;
     }
 
+    public override CustomizationOption[] Options { get { return options; } }
+
     [SerializeField] MeshRenderer affectedMesh;
     [SerializeField] MaterialOption[] options;
     

@@ -8,6 +8,8 @@ public class MeshSwapSet : CustomizationSet {
         public Mesh mesh;
     }
 
+    public override CustomizationOption[] Options { get { return options; } }
+
     [SerializeField] MeshFilter affectedMesh;
     [SerializeField] MeshOption[] options;
     
