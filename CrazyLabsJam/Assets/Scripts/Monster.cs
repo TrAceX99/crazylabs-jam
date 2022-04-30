@@ -18,7 +18,7 @@ public class Monster : MonoBehaviour {
     void Generate() {
         int index = Random.Range(0, bodyPrefabs.Length);
         if (spawnID >= 0) index = spawnID; 
-        Instantiate(bodyPrefabs[Random.Range(0, bodyPrefabs.Length)], transform).GetComponent<Collider>();
+        Instantiate(bodyPrefabs[index], transform).GetComponent<Collider>();
     }
 
     public void Done() {
