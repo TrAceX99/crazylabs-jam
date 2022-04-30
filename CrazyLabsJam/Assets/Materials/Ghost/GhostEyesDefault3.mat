@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GhostEyes1
+  m_Name: GhostEyesDefault3
   m_Shader: {fileID: 4800000, guid: 9baf30ce95c751649b14d96da3a4b4d5, type: 3}
   m_ValidKeywords:
   - _EMISSIVE_SIMPLE
@@ -21,7 +21,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2449
+  m_CustomRenderQueue: -1
   stringTagMap:
     IgnoreProjection: False
     RenderType: TransparentCutout
@@ -71,8 +71,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 2.01, y: 0.52}
+        m_Offset: {x: -0.26, y: 0.06}
     - _Emissive_Tex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -82,9 +82,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bf3a451977bc89f428dafb5d60c54641, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: f2e8fcb09070a664ebfb00d23cfacd34, type: 3}
+        m_Scale: {x: 1.06, y: 0.7}
+        m_Offset: {x: 0.17, y: 0.12}
     - _MatCap_Sampler:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -144,8 +144,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _1st2nd_Shades_Feather: 0.0001
-    - _1st_ShadeColor_Feather: 0.0001
-    - _1st_ShadeColor_Step: 0.5
+    - _1st_ShadeColor_Feather: 1
+    - _1st_ShadeColor_Step: 0
     - _2nd_ShadeColor_Feather: 0.0001
     - _2nd_ShadeColor_Step: 0
     - _ARSampler_AlphaOn: 0
@@ -156,8 +156,8 @@ Material:
     - _Ap_RimLight_FeatherOff: 0
     - _Ap_RimLight_Power: 0.1
     - _AutoRenderQueue: 1
-    - _BaseColor_Step: 0.5
-    - _BaseShade_Feather: 0.0001
+    - _BaseColor_Step: 0
+    - _BaseShade_Feather: 1
     - _Base_Speed: 0
     - _BlurLevelMatcap: 0
     - _BlurLevelSGM: 0
@@ -239,11 +239,11 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 5
-    - _StencilComp: 8
-    - _StencilMode: 2
+    - _StencilComp: 0
+    - _StencilMode: 0
     - _StencilNo: 1
-    - _StencilOpFail: 2
-    - _StencilOpPass: 2
+    - _StencilOpFail: 0
+    - _StencilOpPass: 0
     - _StepOffset: 0
     - _TransparentEnabled: 0
     - _TweakHighColorOnShadow: 0
@@ -264,7 +264,7 @@ Material:
     - _ZWrite: 0
     - _ZWriteMode: 1
     - _isUnityToonshader: 1
-    - _simpleUI: 0
+    - _simpleUI: 2
     - _utsTechnique: 0
     - _utsVersionX: 0
     - _utsVersionY: 6

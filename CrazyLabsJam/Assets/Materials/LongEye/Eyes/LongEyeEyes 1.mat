@@ -264,7 +264,7 @@ Material:
     - _ZWrite: 0
     - _ZWriteMode: 1
     - _isUnityToonshader: 1
-    - _simpleUI: 0
+    - _simpleUI: 2
     - _utsTechnique: 0
     - _utsVersionX: 0
     - _utsVersionY: 6

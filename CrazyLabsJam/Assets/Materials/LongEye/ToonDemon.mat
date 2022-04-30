@@ -161,8 +161,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _1st2nd_Shades_Feather: 0.0001
-    - _1st_ShadeColor_Feather: 0.362
-    - _1st_ShadeColor_Step: 0.413
+    - _1st_ShadeColor_Feather: 0.358
+    - _1st_ShadeColor_Step: 0.666
     - _2nd_ShadeColor_Feather: 0.0001
     - _2nd_ShadeColor_Step: 0
     - _ARSampler_AlphaOn: 0
@@ -269,7 +269,7 @@ Material:
     - _Rotate_MatCapUV: 0
     - _Rotate_NormalMapForMatCapUV: 0
     - _SPRDefaultUnlitColorMask: 15
-    - _SRPDefaultUnlitColMode: 0
+    - _SRPDefaultUnlitColMode: 1
     - _Scroll_EmissiveU: 0
     - _Scroll_EmissiveV: 0
     - _Set_SystemShadowsToBase: 1
@@ -307,19 +307,19 @@ Material:
     - _ZWrite: 0
     - _ZWriteMode: 1
     - _isUnityToonshader: 1
-    - _simpleUI: 2
+    - _simpleUI: 0
     - _utsTechnique: 0
     - _utsVersionX: 0
     - _utsVersionY: 6
     - _utsVersionZ: 1
     m_Colors:
-    - _1st_ShadeColor: {r: 0.090457104, g: 0.41509432, b: 0.017621921, a: 1}
+    - _1st_ShadeColor: {r: 0.5188679, g: 0, b: 0, a: 1}
     - _2nd_ShadeColor: {r: 1, g: 1, b: 1, a: 1}
     - _AngelRing_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BaseColor: {r: 0.17245801, g: 0.7830189, b: 0.033241354, a: 1}
+    - _BaseColor: {r: 0.8773585, g: 0.020692414, b: 0.054234773, a: 1}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0.17245801, g: 0.7830189, b: 0.033241354, a: 1}
+    - _Color: {r: 0.8773585, g: 0.020692414, b: 0.054234773, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _ColorShift: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

@@ -353,7 +353,7 @@ PrefabInstance:
     - target: {fileID: -5932014270860095564, guid: f0116b4d18d9ed74db65943137709279, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7ff47629c29f6c44c9dc334df4d161b6, type: 2}
+      objectReference: {fileID: 2100000, guid: 9aa86fbaf5b72a8439a4314cfcbdfc2a, type: 2}
     - target: {fileID: 919132149155446097, guid: f0116b4d18d9ed74db65943137709279, type: 3}
       propertyPath: m_Name
       value: Ghost
@@ -365,7 +365,7 @@ PrefabInstance:
     - target: {fileID: 2803436535603912181, guid: f0116b4d18d9ed74db65943137709279, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bfd953784ec8c3d499639f1e997a86cd, type: 2}
+      objectReference: {fileID: 2100000, guid: 1a59d32790387614184f2d20b8ce67cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0116b4d18d9ed74db65943137709279, type: 3}
 --- !u!1 &6015117465005020139 stripped
