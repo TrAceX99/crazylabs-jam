@@ -204,17 +204,33 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
+      propertyPath: options.Array.data[0].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 898c71b1cd2d6fc42bb7e8983ab306c0, type: 3}
+    - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: options.Array.data[0].mesh
       value: 
       objectReference: {fileID: -4830227173746187139, guid: 7dcc4835f6c2a6e46b6548b8b6c6fbc2, type: 3}
+    - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
+      propertyPath: options.Array.data[1].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 1c1eec087c7ffc34394e8c901be6f446, type: 3}
     - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: options.Array.data[1].mesh
       value: 
       objectReference: {fileID: -2279544789104232441, guid: b2abb74e9553c1848bc1477cb8ee1998, type: 3}
     - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
+      propertyPath: options.Array.data[2].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 656250033b4eba3469c1326ea23723b1, type: 3}
+    - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: options.Array.data[2].mesh
       value: 
       objectReference: {fileID: -3285773967676295178, guid: 14e66447a3c9d1d49908f98c70bf5e46, type: 3}
+    - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
+      propertyPath: options.Array.data[3].icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 9e32b069f4fead44486a6940efe2558d, type: 3}
     - target: {fileID: 8541176618042998155, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: options.Array.data[3].mesh
       value: 
