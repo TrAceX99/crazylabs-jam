@@ -80,6 +80,7 @@ public class Customizable : MonoBehaviour {
             monster.animationController.PlaySuccess();
             GameManager.Instance.player.inputEnabled = false;
             UIManager.Instance.ShowMenu(CustomizationSets);
+            UIManager.Instance.ShowNextMonsterButton();
         }
     }
 }

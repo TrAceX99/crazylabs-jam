@@ -2,18 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BackButtonController : MonoBehaviour
+public class NextMonsterButton : MonoBehaviour
 {
-    public void Awake(){
+    // Start is called before the first frame update
+    void Start()
+    {
         this.Hide();
     }
-
-
-    public void BackButtonPressed(){
-        Debug.Log("test");
-        GameManager.Instance.player.DeselectSegment();
-    }
-
 
 
     public void Hide(){
@@ -22,5 +17,10 @@ public class BackButtonController : MonoBehaviour
 
     public void Show(){
         this.gameObject.SetActive(true);
+    }
+
+    public void NextMonster(){
+        GameManager.Instance.Done();
+        this.Hide();
     }
 }
