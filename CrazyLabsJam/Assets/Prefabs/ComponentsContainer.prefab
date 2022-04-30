@@ -55,6 +55,9 @@ MonoBehaviour:
   rightArrowPrefab: {fileID: 393276363690373571, guid: efe68746ca63c86faa07b683e6abd638, type: 3}
   componentPrefab: {fileID: 7469702201164742549, guid: 059e569a8fa2995668d7b10aaea78eaf, type: 3}
   backButtonPrefab: {fileID: 87041623141304923, guid: f8f19448160a12ed7b16749e93dc7550, type: 3}
+  needleSprite: {fileID: 21300000, guid: 1e15f9d2de313c9498aeec73f5705e16, type: 3}
+  tweezersSprite: {fileID: 21300000, guid: 40058be192ac6914eae9b081c1ac0a56, type: 3}
+  vacuumCleanerSprite: {fileID: 21300000, guid: 22822f4d00f1cdb46bf679ea7db6b1c5, type: 3}
   startingPosition: 100
 --- !u!1001 &3431911631361521699
 PrefabInstance:

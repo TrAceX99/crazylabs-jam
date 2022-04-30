@@ -10,6 +10,9 @@ public class ComponentContainerController : MonoBehaviour
     public GameObject rightArrowPrefab;
     public GameObject componentPrefab;
     public GameObject backButtonPrefab;
+    public Sprite needleSprite;
+    public Sprite tweezersSprite;
+    public Sprite vacuumCleanerSprite;
     public float startingPosition = 300f;
     private float nextComponent;
     void Start()
@@ -63,6 +66,7 @@ public class ComponentContainerController : MonoBehaviour
                 component.GetComponent<ComponentController>().optionIndex = index;
                 component.transform.SetParent(this.transform, false);
                 component.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(this.nextComponent, 0, 0);
+                component.GetComponent<Image>().sprite = option.icon;
                 this.nextComponent += this.startingPosition;
                 index++;
             }
@@ -79,11 +83,23 @@ public class ComponentContainerController : MonoBehaviour
         foreach (ToolType toolType in Enum.GetValues(typeof(ToolType)))
         {
             if(toolType == ToolType.None) continue;
+            
             GameObject component = Instantiate(componentPrefab);
             component.GetComponent<ComponentController>().toolType = toolType;
             component.transform.SetParent(this.transform, false);
             component.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(this.nextComponent, 0, 0);
             this.nextComponent += this.startingPosition;
+
+
+            if(toolType == ToolType.TapTool){
+                component.GetComponent<Image>().sprite = this.needleSprite;
+            } else if(toolType == ToolType.DragTool){
+                
+                component.GetComponent<Image>().sprite = this.tweezersSprite;
+            } else if(toolType == ToolType.VacuumTool){
+                
+                component.GetComponent<Image>().sprite = this.vacuumCleanerSprite;
+            }
         }
 
     }
