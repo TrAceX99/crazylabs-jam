@@ -244,45 +244,6 @@ PrefabInstance:
     - {fileID: 5350720724675326770, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
     - {fileID: -3571323499474373303, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
---- !u!1 &483986374269371141 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1897239687461357065, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
-  m_PrefabInstance: {fileID: 2081558556755936524}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2417803384524439419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483986374269371141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ef5b2a3337b61e439ef1023792317e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setName: Mouth
-  affectedMesh: {fileID: 8504298297861748791}
-  options:
-  - icon: {fileID: 0}
-    material: {fileID: 2100000, guid: 7ff47629c29f6c44c9dc334df4d161b6, type: 2}
---- !u!114 &7182781920996944504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483986374269371141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ef5b2a3337b61e439ef1023792317e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setName: Eyes
-  affectedMesh: {fileID: 9029674237267405430}
-  options:
-  - icon: {fileID: 0}
-    material: {fileID: 2100000, guid: e46a08b83dd7d344ea8dd31154f09d3c, type: 2}
 --- !u!23 &4087617072529251248 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2619138301582466748, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
@@ -469,13 +430,3 @@ MonoBehaviour:
   - {fileID: 2100000, guid: a1b6cd8bddfe52a479164eaad3edca44, type: 2}
   happyFaces:
   - {fileID: 2100000, guid: 8efb7519d1781564480a16fcffb84a2a, type: 2}
---- !u!23 &8504298297861748791 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -5932014270860095564, guid: f0116b4d18d9ed74db65943137709279, type: 3}
-  m_PrefabInstance: {fileID: 6604553376238942083}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &9029674237267405430 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2803436535603912181, guid: f0116b4d18d9ed74db65943137709279, type: 3}
-  m_PrefabInstance: {fileID: 6604553376238942083}
-  m_PrefabAsset: {fileID: 0}
