@@ -97,8 +97,8 @@ public class DragFeature : Feature {
             case TouchPhase.Ended:
                 grabbed = false;
                 if (!pulled) transform.localPosition = basePosLocal;
-                if (stretchable) transform.localScale = Vector3.one;
                 else destroyTimer = Time.time;
+                if (stretchable) transform.localScale = Vector3.one;
                 break;
             default:
                 break;
