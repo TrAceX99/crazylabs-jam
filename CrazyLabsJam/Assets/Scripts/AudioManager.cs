@@ -21,11 +21,9 @@ public class AudioManager : Singleton<AudioManager> {
     public void Play(string clipName, float volume = 1.0f) {
         AudioClip clip;
         if (!audioClips.TryGetValue(clipName, out clip)) throw new System.Exception("AudioClip " + clipName + " not found!");
-        
-        Play(clip, volume);
     }
 
     public void Play(AudioClip clip, float volume = 1.0f) {
-        audioSource.PlayOneShot(clip, volume);
+        audioSource.PlayOneShot(clip, volume * DebugMenu.Instance.volume);
     }
 }
