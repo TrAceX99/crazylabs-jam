@@ -45,6 +45,7 @@ public class Customizable : MonoBehaviour {
     }
 
     void SpawnFeatures() {
+        if (maxFeatures == 0) return;
         int featureCount = Random.Range(1, maxFeatures + 1);
         featuresLeft = featureCount;
 
