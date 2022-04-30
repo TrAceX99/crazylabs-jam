@@ -32,15 +32,20 @@ public class Customizable : MonoBehaviour {
         cameraController.ZoomIn(cameraPos);
         monster.touchRotate.LockRotation(cameraPos.position);
         selected = true;
+        if (this.customizationUnlocked)     UIManager.Instance.menuController.Show(CustomizationSets);
+        else                                UIManager.Instance.menuController.Show();
+
     }
 
     public void Deselect() {
         selected = false;
         monster.touchRotate.UnlockRotation();
         cameraController.ZoomOut();
+        UIManager.Instance.menuController.Hide();
     }
 
     void SpawnFeatures() {
+        if (maxFeatures == 0) return;
         int featureCount = Random.Range(1, maxFeatures + 1);
         featuresLeft = featureCount;
 

@@ -49,7 +49,7 @@ MonoBehaviour:
   tapMaxDuration: 0.2
   segmentSelectionMask:
     serializedVersion: 2
-    m_Bits: 439
+    m_Bits: 544
   featureInteractionMask:
     serializedVersion: 2
     m_Bits: 374

@@ -19,7 +19,7 @@ public class Player : MonoBehaviour {
     float tapTimer;
     State state;
     CameraController cameraController;
-    Customizable selectedSegment;
+    public Customizable selectedSegment {get; private set;}
     Feature activeFeature;
 
     private void Start() {
@@ -38,7 +38,7 @@ public class Player : MonoBehaviour {
             switch (touch.phase) {
                 case TouchPhase.Began:
                     if (state == State.Selected) {
-                        if (Physics.Raycast(Camera.main.ScreenPointToRay(touch.position), out hit, 20f, featureInteractionMask) && hit.collider.tag == "Feature") {
+                        if (Physics.Raycast(Camera.main.ScreenPointToRay(touch.position), out hit, 100f, featureInteractionMask) && hit.collider.tag == "Feature") {
                             activeFeature = hit.collider.gameObject.GetComponent<Feature>();
                         }
                     }
@@ -46,7 +46,7 @@ public class Player : MonoBehaviour {
                     break;
                 case TouchPhase.Moved:
                     if (state == State.Selected) {
-                        if (Physics.Raycast(Camera.main.ScreenPointToRay(touch.position), out hit, 20f, featureInteractionMask) && hit.collider.tag == "Feature") {
+                        if (Physics.Raycast(Camera.main.ScreenPointToRay(touch.position), out hit, 100f, featureInteractionMask) && hit.collider.tag == "Feature") {
                             hit.collider.gameObject.GetComponent<Feature>().HandleTouch(touch);
                         }
                     }
@@ -87,7 +87,7 @@ public class Player : MonoBehaviour {
                 SelectSegment(hit.collider.gameObject.GetComponent<Customizable>());
             }
         } else if (state == State.Selected) {
-            if (!Physics.Raycast(tapRay, out hit)) DeselectSegment();
+            if (!Physics.Raycast(tapRay, out hit, 100f, featureInteractionMask)) DeselectSegment();
             else if (hit.collider.tag == "Feature") hit.collider.gameObject.GetComponent<Feature>().HandleTap();
         }
     }
@@ -96,8 +96,6 @@ public class Player : MonoBehaviour {
         state = State.Selected;
         selectedSegment = segment;
         segment.Select();
-        // !DEBUG!
-        selectedTool = ToolType.DragTool;
     }
 
     void DeselectSegment() {

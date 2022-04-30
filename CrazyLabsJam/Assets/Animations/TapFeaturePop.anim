@@ -21,7 +21,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.2, y: 0.2, z: 0.2}
+        value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0.41636217, y: 0.47804546, z: 0.4357038}
         outSlope: {x: 0.41636217, y: 0.47804546, z: 0.4357038}
         tangentMode: 0
@@ -30,7 +30,7 @@ AnimationClip:
         outWeight: {x: 0.15317309, y: 0.13340881, z: 0.16058469}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 0.3, y: 0.3, z: 0.3}
+        value: {x: 1.5, y: 1.5, z: 1.5}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -49,7 +49,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Sphere
+    path: Zit
   m_FloatCurves: []
   m_PPtrCurves: []
   m_SampleRate: 60
@@ -86,7 +86,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.2
+        value: 1
         inSlope: 0.41636217
         outSlope: 0.41636217
         tangentMode: 0
@@ -95,7 +95,7 @@ AnimationClip:
         outWeight: 0.15317309
       - serializedVersion: 3
         time: 0.5
-        value: 0.3
+        value: 1.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -115,7 +115,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: Sphere
+    path: Zit
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -123,7 +123,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.2
+        value: 1
         inSlope: 0.47804546
         outSlope: 0.47804546
         tangentMode: 0
@@ -132,7 +132,7 @@ AnimationClip:
         outWeight: 0.13340881
       - serializedVersion: 3
         time: 0.5
-        value: 0.3
+        value: 1.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -152,7 +152,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: Sphere
+    path: Zit
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -160,7 +160,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.2
+        value: 1
         inSlope: 0.4357038
         outSlope: 0.4357038
         tangentMode: 0
@@ -169,7 +169,7 @@ AnimationClip:
         outWeight: 0.16058469
       - serializedVersion: 3
         time: 0.5
-        value: 0.3
+        value: 1.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -189,7 +189,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: Sphere
+    path: Zit
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class ComponentController : MonoBehaviour
 {
+    public ToolType toolType;
+    public CustomizationSet set;
+    public int optionIndex;
     
-    private GameObject currentSelectedComponent;
-    private Vector2 originalPosition;
     void Start()
     {
         
@@ -15,19 +16,15 @@ public class ComponentController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(this.currentSelectedComponent != null){
-            this.currentSelectedComponent.transform.position = Input.mousePosition;
-        }
     }
 
-    public void OnComponentClick(GameObject clickedComponent){
-        if(this.currentSelectedComponent != null){
-            var component = this.currentSelectedComponent;
-            this.currentSelectedComponent = null;
-            component.transform.position = this.originalPosition;
+    public void OnComponentClick(){
+        Debug.Log(this.toolType);
+        if(this.set != null && this.optionIndex != -1){
+            this.set.ApplyOption(this.optionIndex);
+        } else {
+            GameManager.Instance.player.selectedTool = this.toolType;
         }
-        this.originalPosition = clickedComponent.transform.position;
-        this.currentSelectedComponent = clickedComponent;
-        
+
     }
 }
