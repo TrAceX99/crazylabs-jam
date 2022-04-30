@@ -11,11 +11,13 @@ public class UIManager : Singleton<UIManager> {
     public BackButtonController backButton {get; private set;}
     public NextMonsterButton nextMonsterButton {get; private set;}
 
+    public int segmentCounter;
 
     public void Start(){
         this.menuController = this.GetComponentInChildren<MenuController>(true);
         this.backButton = this.GetComponentInChildren<BackButtonController>(true);
         this.nextMonsterButton = this.GetComponentInChildren<NextMonsterButton>(true);
+        segmentCounter = 0;
     }
     
 
@@ -38,6 +40,12 @@ public class UIManager : Singleton<UIManager> {
     }
 
     public void ShowNextMonsterButton(){
-        this.nextMonsterButton.Show();
+        segmentCounter++;
+        if (segmentCounter >= 2) this.nextMonsterButton.Show();
+    }
+
+    public void ResetNextMonster() {
+        segmentCounter = 0;
+        this.nextMonsterButton.Hide();
     }
 }

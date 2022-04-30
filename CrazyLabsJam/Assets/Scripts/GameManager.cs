@@ -32,5 +32,6 @@ public class GameManager : Singleton<GameManager> {
     public void Done() {
         monster.Done();
         player.inputEnabled = false;
+        UIManager.Instance.ResetNextMonster();
     }
 }

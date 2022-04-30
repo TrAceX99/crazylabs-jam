@@ -19,6 +19,7 @@ public class Monster : MonoBehaviour {
         int index = Random.Range(0, bodyPrefabs.Length);
         if (spawnID >= 0) index = spawnID; 
         Instantiate(bodyPrefabs[index], transform).GetComponent<Collider>();
+        if (index == 2) UIManager.Instance.ShowNextMonsterButton();
     }
 
     public void Done() {
