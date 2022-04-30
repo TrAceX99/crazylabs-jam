@@ -15,8 +15,8 @@ public class CameraController : MonoBehaviour {
     }
 
     private void Update() {
-        transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * moveSpeed);
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, Time.deltaTime * moveSpeed);
+        transform.position = Vector3.Lerp(transform.position, targetPos + Vector3.forward * DebugMenu.Instance.cameraDistance, Time.deltaTime * moveSpeed * DebugMenu.Instance.cameraSpeed);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, Time.deltaTime * moveSpeed * DebugMenu.Instance.cameraSpeed);
     }
 
     public void ZoomOut() {

@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 public class Monster : MonoBehaviour {
+    public int spawnID = -1;
     
     public TouchRotate touchRotate { get; private set; }
     public AnimationController animationController { get; private set; }
@@ -15,6 +16,8 @@ public class Monster : MonoBehaviour {
     }
 
     void Generate() {
+        int index = Random.Range(0, bodyPrefabs.Length);
+        if (spawnID >= 0) index = spawnID; 
         Instantiate(bodyPrefabs[Random.Range(0, bodyPrefabs.Length)], transform).GetComponent<Collider>();
     }
 
