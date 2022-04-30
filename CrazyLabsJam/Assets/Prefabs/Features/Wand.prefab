@@ -77,7 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   segment: {fileID: 0}
   pullGive: 0.3
-  pullDistance: 0.25
+  pullDistance: 0.2
   gravity: 9.81
   destroyTime: 0.5
   stretchable: 0

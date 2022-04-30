@@ -133,11 +133,11 @@ PrefabInstance:
       objectReference: {fileID: 2853531066430028532, guid: e5244fd7d99f9214a9b598772cee4ac1, type: 3}
     - target: {fileID: 2634816970444529436, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9841142
+      value: 1.1135235
       objectReference: {fileID: 0}
     - target: {fileID: 2634816970444529436, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.1704445
+      value: 3.6534076
       objectReference: {fileID: 0}
     - target: {fileID: 3771429667870978681, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: m_RootOrder
@@ -213,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7317109097460954048, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: raycastRadius
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7317109097460954048, guid: f1086cf1e05ea9a42aaba108d08ea0e5, type: 3}
       propertyPath: featureSpawnCollider
