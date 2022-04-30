@@ -87,8 +87,9 @@ public class Player : MonoBehaviour {
                 SelectSegment(hit.collider.gameObject.GetComponent<Customizable>());
             }
         } else if (state == State.Selected) {
-            if (!Physics.Raycast(tapRay, out hit, 100f, featureInteractionMask)) DeselectSegment();
-            else if (hit.collider.tag == "Feature") hit.collider.gameObject.GetComponent<Feature>().HandleTap();
+            if (!Physics.Raycast(tapRay, out hit, 100f, featureInteractionMask)) return;
+
+            if (hit.collider.tag == "Feature") hit.collider.gameObject.GetComponent<Feature>().HandleTap();
         }
     }
 
@@ -98,7 +99,7 @@ public class Player : MonoBehaviour {
         segment.Select();
     }
 
-    void DeselectSegment() {
+    public void DeselectSegment() {
         state = State.Main;
         selectedSegment.Deselect();
         selectedSegment = null;
