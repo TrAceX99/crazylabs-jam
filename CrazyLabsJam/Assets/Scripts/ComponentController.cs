@@ -23,7 +23,7 @@ public class ComponentController : MonoBehaviour
         if(this.set != null && this.optionIndex != -1){
             this.set.ApplyOption(this.optionIndex);
         } else {
-            GameManager.Instance.player.selectedTool = this.toolType;
+            GameManager.Instance.player.SelectedTool = this.toolType;
         }
 
     }
