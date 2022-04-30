@@ -19,7 +19,7 @@ public class Player : MonoBehaviour {
     float tapTimer;
     State state;
     CameraController cameraController;
-    Customizable selectedSegment;
+    public Customizable selectedSegment {get; private set;}
     Feature activeFeature;
 
     private void Start() {
