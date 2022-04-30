@@ -62,4 +62,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyPrefabs:
-  - {fileID: 6242756941077755441, guid: 6079165065185d14ca9516794b3dfcab, type: 3}
+  - {fileID: 6242756941077755441, guid: 01e8dd5110dbabd4a9267923a3e59a21, type: 3}
