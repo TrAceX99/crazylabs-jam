@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public enum ToolType {
     None, TapTool, DragTool, VacuumTool
@@ -29,7 +30,7 @@ public class Player : MonoBehaviour {
     }
 
     private void Update() {
-        if (!inputEnabled) return;
+        if (!inputEnabled || EventSystem.current.IsPointerOverGameObject(0)) return;
 
         if (Input.touchCount > 0) {
             Touch touch = Input.GetTouch(0);
