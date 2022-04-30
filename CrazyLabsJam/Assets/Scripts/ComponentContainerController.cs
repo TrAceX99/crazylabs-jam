@@ -27,7 +27,8 @@ public class ComponentContainerController : MonoBehaviour
     }
 
 
-    private void initializeMenu(){
+    private void initializeMenu()
+    {
         this.nextComponent = this.startingPosition;
         foreach (Transform child in transform)
         {
@@ -47,7 +48,7 @@ public class ComponentContainerController : MonoBehaviour
         // GameObject backButton = Instantiate(backButtonPrefab);
         // backButton.transform.SetParent(this.transform, false);
         // backButton.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(200, 0, 0);
-        
+
     }
 
 
@@ -58,19 +59,26 @@ public class ComponentContainerController : MonoBehaviour
         this.initializeMenu();
         foreach (CustomizationSet set in customizationSets)
         {
-            int index = 0;
-            foreach(CustomizationSet.CustomizationOption option in set.Options){
-                GameObject component = Instantiate(componentPrefab);
-                
-                component.GetComponent<ComponentController>().set = set;
-                component.GetComponent<ComponentController>().optionIndex = index;
-                component.transform.SetParent(this.transform, false);
-                component.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(this.nextComponent, 0, 0);
-                component.GetComponent<Image>().sprite = option.icon;
-                this.nextComponent += this.startingPosition;
-                index++;
-            }
-            
+            this.ShowToolsSet(set);
+
+        }
+    }
+
+
+    public void ShowToolsSet(CustomizationSet customizationSet)
+    {
+        int index = 0;
+        foreach (CustomizationSet.CustomizationOption option in customizationSet.Options)
+        {
+            GameObject component = Instantiate(componentPrefab);
+
+            component.GetComponent<ComponentController>().set = customizationSet;
+            component.GetComponent<ComponentController>().optionIndex = index;
+            component.transform.SetParent(this.transform, false);
+            component.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(this.nextComponent, 0, 0);
+            component.GetComponent<Image>().sprite = option.icon;
+            this.nextComponent += this.startingPosition;
+            index++;
         }
     }
 
@@ -82,8 +90,8 @@ public class ComponentContainerController : MonoBehaviour
         this.initializeMenu();
         foreach (ToolType toolType in Enum.GetValues(typeof(ToolType)))
         {
-            if(toolType == ToolType.None) continue;
-            
+            if (toolType == ToolType.None) continue;
+
             GameObject component = Instantiate(componentPrefab);
             component.GetComponent<ComponentController>().toolType = toolType;
             component.transform.SetParent(this.transform, false);
@@ -91,13 +99,18 @@ public class ComponentContainerController : MonoBehaviour
             this.nextComponent += this.startingPosition;
 
 
-            if(toolType == ToolType.TapTool){
+            if (toolType == ToolType.TapTool)
+            {
                 component.GetComponent<Image>().sprite = this.needleSprite;
-            } else if(toolType == ToolType.DragTool){
-                
+            }
+            else if (toolType == ToolType.DragTool)
+            {
+
                 component.GetComponent<Image>().sprite = this.tweezersSprite;
-            } else if(toolType == ToolType.VacuumTool){
-                
+            }
+            else if (toolType == ToolType.VacuumTool)
+            {
+
                 component.GetComponent<Image>().sprite = this.vacuumCleanerSprite;
             }
         }
