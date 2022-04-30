@@ -14,7 +14,8 @@ public class VacuumFeature : Feature {
         AudioManager.Instance.Play("Slurp", 0.5f);
     }
 
-    private void Start() {
+    protected override void Start() {
+        base.Start();
         transform.localEulerAngles += Vector3.forward * Random.Range(0f, 360f);
     }
 

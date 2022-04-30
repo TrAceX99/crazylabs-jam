@@ -19,7 +19,8 @@ public class DragFeature : Feature {
     Vector3 velocity;
     float destroyTimer;
 
-    private void Start() {
+    protected override void Start() {
+        base.Start();
         grabbed = false;
         pulled = false;
         basePosLocal = transform.localPosition;
