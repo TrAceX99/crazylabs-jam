@@ -44,6 +44,7 @@ public class DragFeature : Feature {
     }
 
     public override void HandleTouch(Touch touch) {
+        if (!segment.selected) return;
         if (!active || GameManager.Instance.player.SelectedTool != UsedTool) return;
 
         float enter;

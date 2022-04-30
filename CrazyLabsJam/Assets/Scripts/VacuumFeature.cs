@@ -5,6 +5,7 @@ public class VacuumFeature : Feature {
     protected override ToolType UsedTool { get { return ToolType.VacuumTool; } }
 
     public override void HandleTouch(Touch touch) {
+        if (!segment.selected) return;
         if (!active || GameManager.Instance.player.SelectedTool != UsedTool) return;
         if (touch.phase != TouchPhase.Moved) return;
 
