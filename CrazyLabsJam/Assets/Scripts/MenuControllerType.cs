@@ -16,6 +16,7 @@ public class MenuControllerType : MenuControllerAbstract
 
         this.gameObject.SetActive(true);
 
+        scrollRect.horizontalNormalizedPosition = 0f;
     }
 
 }

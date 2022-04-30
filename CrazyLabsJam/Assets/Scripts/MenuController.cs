@@ -9,6 +9,7 @@ public class MenuController : MenuControllerAbstract
 
         this.gameObject.SetActive(true);
 
+        scrollRect.horizontalNormalizedPosition = 0f;
     }
 
 
@@ -17,6 +18,7 @@ public class MenuController : MenuControllerAbstract
 
         this.gameObject.SetActive(true);
 
+        scrollRect.horizontalNormalizedPosition = 0f;
     }
 
 }
