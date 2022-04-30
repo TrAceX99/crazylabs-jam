@@ -404,6 +404,29 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1a59d32790387614184f2d20b8ce67cb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0116b4d18d9ed74db65943137709279, type: 3}
+--- !u!1 &561949277813031957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6657560127643677590, guid: f0116b4d18d9ed74db65943137709279, type: 3}
+  m_PrefabInstance: {fileID: 6604553376238942083}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7656548920914326951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561949277813031957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce90c61aff543b43904c8ddb57ccaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sadFaces:
+  - {fileID: 2100000, guid: 763b890dd2ffdea40b3b4c9f78bfa7d9, type: 2}
+  - {fileID: 2100000, guid: 1a59d32790387614184f2d20b8ce67cb, type: 2}
+  - {fileID: 2100000, guid: 200364f217b05244c987537aed71b83a, type: 2}
+  happyFaces:
+  - {fileID: 2100000, guid: 54f78f3051e62eb498cda2b7170addfe, type: 2}
 --- !u!1 &6015117465005020139 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 635547659545568360, guid: f0116b4d18d9ed74db65943137709279, type: 3}
@@ -423,6 +446,29 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2959467708922500008, guid: f0116b4d18d9ed74db65943137709279, type: 3}
+--- !u!1 &8320360186594884735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2945298957642648572, guid: f0116b4d18d9ed74db65943137709279, type: 3}
+  m_PrefabInstance: {fileID: 6604553376238942083}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4946727220077934445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8320360186594884735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce90c61aff543b43904c8ddb57ccaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sadFaces:
+  - {fileID: 2100000, guid: 7f0d2924321ecad42819881140f048f7, type: 2}
+  - {fileID: 2100000, guid: 9aa86fbaf5b72a8439a4314cfcbdfc2a, type: 2}
+  - {fileID: 2100000, guid: a1b6cd8bddfe52a479164eaad3edca44, type: 2}
+  happyFaces:
+  - {fileID: 2100000, guid: 8efb7519d1781564480a16fcffb84a2a, type: 2}
 --- !u!23 &8504298297861748791 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -5932014270860095564, guid: f0116b4d18d9ed74db65943137709279, type: 3}
