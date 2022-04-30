@@ -9,7 +9,7 @@ public class CustomizationSet : MonoBehaviour {
     }
 
     // In case things don't work, override this in child classes
-    public CustomizationOption[] Options { get { return options; } }
+    public virtual CustomizationOption[] Options { get { return options; } }
 
     public int SelectedID { get; private set; }
 

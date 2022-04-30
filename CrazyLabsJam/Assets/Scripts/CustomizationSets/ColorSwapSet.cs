@@ -8,6 +8,8 @@ public class ColorSwapSet : CustomizationSet {
         public Color color;
     }
 
+    public override CustomizationOption[] Options { get { return options; } }
+
     [SerializeField] Material affectedMaterial;
     [SerializeField] ColorOption[] options;
     

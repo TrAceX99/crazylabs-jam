@@ -10,7 +10,7 @@ public class ComponentContainerController : MonoBehaviour
     public GameObject rightArrowPrefab;
     public GameObject componentPrefab;
     public GameObject backButtonPrefab;
-    public float startingPosition = 250f;
+    public float startingPosition = 300f;
     private float nextComponent;
     void Start()
     {
@@ -25,7 +25,7 @@ public class ComponentContainerController : MonoBehaviour
 
 
     private void initializeMenu(){
-        this.nextComponent = this.startingPosition*2;
+        this.nextComponent = this.startingPosition;
         foreach (Transform child in transform)
         {
             Destroy(child.gameObject);
@@ -41,9 +41,9 @@ public class ComponentContainerController : MonoBehaviour
         rightArrow.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(-15, 0, 0);
 
 
-        GameObject backButton = Instantiate(backButtonPrefab);
-        backButton.transform.SetParent(this.transform, false);
-        backButton.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(200, 0, 0);
+        // GameObject backButton = Instantiate(backButtonPrefab);
+        // backButton.transform.SetParent(this.transform, false);
+        // backButton.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(200, 0, 0);
         
     }
 

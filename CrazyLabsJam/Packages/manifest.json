@@ -4,6 +4,7 @@
     "com.unity.render-pipelines.universal": "12.1.6",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.6.4",
+    "com.unity.toolchain.linux-x86_64": "2.0.0",
     "com.unity.toonshader": "0.6.1-preview",
     "com.unity.ugui": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",

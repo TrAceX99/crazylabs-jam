@@ -19,9 +19,14 @@ public class GameManager : Singleton<GameManager> {
         if (Input.GetKeyDown(KeyCode.Space)) Done();
     }
 
-    public void NewMonster() {
+    public void NewMonster(int id = -1) {
         player.inputEnabled = false;
         monster = Instantiate(monsterPrefab, Vector3.zero, Quaternion.identity).GetComponent<Monster>();
+        monster.spawnID = id;
+    }
+
+    public void RemoveMonster() {
+        Destroy(monster.gameObject);
     }
 
     public void Done() {

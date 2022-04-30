@@ -74,7 +74,7 @@ public class DragFeature : Feature {
                 } else {
                     Vector3 delta = inputPos - transform.position;
                     float deltaZ = Vector3.Dot(transform.forward, delta);
-                    transform.position += transform.forward * Mathf.Sign(deltaZ) * pullGive * touch.deltaPosition.magnitude * Time.deltaTime / touch.deltaTime;
+                    transform.position += transform.forward * Mathf.Sign(deltaZ) * pullGive * DebugMenu.Instance.pullGiveMultiplier * touch.deltaPosition.magnitude * Time.deltaTime / touch.deltaTime;
 
 
                     if (stretchable) {
