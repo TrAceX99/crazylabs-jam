@@ -149,7 +149,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 39beb30236a09a947a8f6cfedab93803, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 23cadf96a5cc89746b541b0b4de37ffd, type: 2}
+      objectReference: {fileID: 2100000, guid: 970ed6acfb672d041ba0e631a82f5c2e, type: 2}
     - target: {fileID: 919132149155446097, guid: 39beb30236a09a947a8f6cfedab93803, type: 3}
       propertyPath: m_Name
       value: ChewingGum
